@@ -9,6 +9,55 @@ a,
 a:visited {
     text-decoration: none;
 }
+body {
+    font-family: "Public Sans", sans-serif;
+}
 html {
     scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+//
+.hide-for-mobile {
+    @include breakpoint-down(meduim) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.padding-for-desktop {
+    @include breakpoint-up(large) {
+        padding: 0 160px;
+    }
+}
+
+.padding-for-mobile {
+    @include breakpoint-down(meduim) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+// buttons
+.btn {
+    width: 160px;
+    height: 45px;
+    @include par(1rem, 400, $white);
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, $limeGreen, $birghtCyan);
+    cursor: pointer;
+    outline: none;
+    transition: $tra;
+    &:hover {
+        opacity: 0.7;
+    }
 }

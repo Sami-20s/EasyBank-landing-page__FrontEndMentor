@@ -1,4 +1,5 @@
 @import "helpers/variables/variables";
+@import "helpers/mixins/mixins";
 @import "helpers/general/general";
-@import "pages/Home/mobile/nav/nav";
-@import "pages/Home/mobile/header/header";
+@import "pages/Home/nav/nav";
+@import "pages/Home/header/header";
