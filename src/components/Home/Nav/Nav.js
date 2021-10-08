@@ -6,6 +6,12 @@ import { linksList } from "./linksList";
 import { FaBars, FaTimes } from "react-icons/fa";
 const Nav = () => {
     const [isBtnClick, setIsBtnClick] = useState(false);
+    if (isBtnClick) {
+        document.body.style.overflowY = "hidden";
+    } else {
+        document.body.style.overflowY = "scroll";
+    }
+
     return (
         <nav id="nav" className="padding-for-desktop padding-for-mobile">
             <div className="nav__wrapper">
