@@ -4,7 +4,7 @@ import Nav from "./Nav/Nav";
 
 const Home = () => {
     return (
-        <main className="padding-for-desktop padding-for-mobile">
+        <main>
             <Nav />
         </main>
     );
