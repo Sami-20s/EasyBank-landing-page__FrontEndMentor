@@ -10,6 +10,7 @@ a:visited {
     text-decoration: none;
 }
 body {
+    overflow-x: hidden;
     font-family: "Public Sans", sans-serif;
 }
 html {
@@ -43,6 +44,12 @@ ul {
     @include breakpoint-down(meduim) {
         padding-left: 25px;
         padding-right: 25px;
+    }
+}
+
+.padding-sections {
+    @include breakpoint-down(meduim) {
+        padding: 36px 25px;
     }
 }
 

@@ -1,0 +1,88 @@
+#header {
+    .header__wrapper {
+        @include breakpoint-up(large) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        &__img {
+            position: relative;
+            background-image: url("../../../../img/bg-intro-mobile.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 280px;
+            width: 100%;
+            @include breakpoint-up(meduim) {
+                min-height: 25rem;
+                &::before {
+                    background-size: 60% !important;
+                }
+            }
+            @include breakpoint-up(large) {
+                background-image: url("../../../../img/bg-intro-desktop.svg");
+                background-position: left center;
+                min-height: 700px;
+                background-size: 1100px;
+                width: 2000px;
+                &::after {
+                    display: block;
+                    position: absolute;
+                    content: "";
+                    height: 105%;
+                    width: 100%;
+                    left: 13%;
+                    background-image: url("../../../../img/image-mockups.png");
+                    background-size: 93%;
+                    min-height: 700px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+            &::before {
+                position: absolute;
+                display: block;
+                content: "";
+                height: 100%;
+                width: 100%;
+                background-image: url("../../../../img/image-mockups.png");
+                background-size: 93%;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                @include breakpoint-up(large) {
+                    display: none;
+                }
+            }
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            @include breakpoint-up(large) {
+                margin-top: -30px;
+                text-align: left;
+                align-items: flex-start;
+                padding-right: 0;
+            }
+            h1 {
+                @include par(2.31rem, 300, $darkBlue);
+                line-height: 1.15;
+                margin-bottom: 20px;
+                @include breakpoint-up(large) {
+                    font-size: 3.25rem;
+                    margin-bottom: 30px;
+                }
+            }
+            p {
+                @include par(1rem, 300, $grayishBlue);
+                line-height: 1.5;
+                margin-bottom: 30px;
+                @include breakpoint-up(large) {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
