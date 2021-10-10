@@ -34,20 +34,20 @@ ul {
     }
 }
 
-.padding-for-desktop {
+.desktop-container {
     @include breakpoint-up(large) {
         padding: 0 160px;
     }
 }
 
-.padding-for-mobile {
+.nav-container {
     @include breakpoint-down(meduim) {
         padding-left: 25px;
         padding-right: 25px;
     }
 }
 
-.padding-sections {
+.mobile-container {
     @include breakpoint-down(meduim) {
         padding: 36px 25px;
     }

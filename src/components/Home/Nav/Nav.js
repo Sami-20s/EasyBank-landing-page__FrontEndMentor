@@ -5,15 +5,15 @@ import Links from "./Links";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../../../context";
 const Nav = () => {
+    const { navLists } = useGlobalContext();
     const [isBtnClick, setIsBtnClick] = useState(false);
     if (isBtnClick) {
         document.body.style.overflowY = "hidden";
     } else {
         document.body.style.overflowY = "scroll";
     }
-    const { navLists } = useGlobalContext();
     return (
-        <nav id="nav" className="padding-for-desktop padding-for-mobile">
+        <nav id="nav" className="desktop-container nav-container">
             <div className="nav__wrapper">
                 <Logo className="logo" />
                 <Links links={navLists} isBtnClick={isBtnClick} />
