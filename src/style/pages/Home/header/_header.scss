@@ -33,7 +33,7 @@
                     width: 100%;
                     left: 13%;
                     background-image: url("../../../../img/image-mockups.png");
-                    background-size: 90%;
+                    background-size: 87%;
                     min-height: 700px;
                     background-repeat: no-repeat;
                     background-position: center center;
@@ -67,7 +67,7 @@
                 padding-right: 0;
             }
             h1 {
-                @include par(2.31rem, 300, $darkBlue);
+                @include par(2.31rem, 400, $darkBlue);
                 line-height: 1.15;
                 margin-bottom: 20px;
                 @include breakpoint-up(large) {
