@@ -1,0 +1,93 @@
+#footer {
+    background-color: $darkBlue;
+    .footer__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include breakpoint-up(large) {
+            padding: 50px 0px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "topLeft middle . right"
+                "bottomLeft  middle . right ";
+        }
+        .logo {
+            margin-bottom: 40px;
+            @include breakpoint-up(large) {
+                margin-bottom: 0;
+                align-self: flex-start;
+                grid-area: topLeft;
+            }
+            #logo-text {
+                fill: $white;
+            }
+        }
+        &__social-icons {
+            margin-bottom: 40px;
+            width: fit-content;
+            @include breakpoint-up(large) {
+                margin-bottom: 0;
+                grid-area: bottomLeft;
+            }
+            ul {
+                display: flex;
+                @include breakpoint-up(large) {
+                    grid-area: middle;
+                }
+                li {
+                    transform: scale(1.4);
+                    cursor: pointer;
+                    transition: $tra;
+                    &:hover {
+                        transform: scale(1.6);
+                        #social-icon {
+                            fill: $limeGreen;
+                            transition: $tra;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+        &__links {
+            margin-bottom: 30px;
+            @include breakpoint-up(large) {
+                align-self: center;
+                grid-area: middle;
+                margin-bottom: 0;
+            }
+            ul {
+                text-align: center;
+                @include breakpoint-up(large) {
+                    display: grid;
+                    place-content: center;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    a {
+                        @include par(1rem, 400, $white);
+                    }
+                    &:hover a {
+                        transition: $tra;
+                        color: $limeGreen;
+                    }
+                }
+            }
+        }
+        &__buttons {
+            @include breakpoint-up(large) {
+                grid-area: right;
+                justify-self: flex-end;
+                align-self: flex-start;
+            }
+        }
+    }
+}
