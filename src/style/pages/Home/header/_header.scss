@@ -67,6 +67,9 @@
                 padding-right: 0;
             }
             h1 {
+                @include breakpoint-down(meduim) {
+                    margin-top: -30px;
+                }
                 @include par(2.31rem, 400, $darkBlue);
                 line-height: 1.15;
                 margin-bottom: 20px;
