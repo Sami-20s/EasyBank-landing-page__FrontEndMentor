@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { navLists } from "./Lists/Nav/navLists";
 import { featureLists } from "./Lists/Features/featureLists";
+import { articlesLists } from "./Lists/Articles/articlesLists";
 const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
@@ -9,6 +10,7 @@ export const AppProvider = ({ children }) => {
             value={{
                 navLists,
                 featureLists,
+                articlesLists,
             }}
         >
             {children}
