@@ -20,8 +20,7 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 
 ### Links
 
--   Solution URL: [My Solution URL](https://easybank-page.pages.dev/)
-<!-- -   Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+-   Live Site URL: [My Solution URL](https://easybank-page.pages.dev/)
 
 ## My process
 
